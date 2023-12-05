@@ -28,11 +28,12 @@ function ToggleTheme() {
     let text = document.getElementsByClassName("Text")
     let containertext = document.getElementsByClassName("ContainerText")
     const lengtharray = [containers.length,buttons.length,text.length,containertext.length]
+    document.body.style.backgroundColor = color2;
     for (let i = 0; i < lengtharray[0]; i++) {
       let container = containers[i]
       container.style.color = color2;
       container.style.backgroundColor = color1;
-      container.style.borderColor = color2
+      container.style.borderColor = color2;
     }
     for (let i = 0; i < lengtharray[1]; i++) {
       let button = buttons[i]
@@ -46,7 +47,7 @@ function ToggleTheme() {
     for (let i = 0; i < lengtharray[3]; i++) {
       containertext[i].style.color = color2;
     }
-  }, 200);
+  }, 1000);
 }
 
 function ToggleDisplayTick() {
