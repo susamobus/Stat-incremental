@@ -1,6 +1,6 @@
 let DisplayTicking;
 let DisplayInterval = 50;
-let Appearance = "light";
+let Theme = "light";
 
 function DisplayTick() {
   if (points != 0) {
@@ -8,15 +8,15 @@ function DisplayTick() {
   }
 }
 
-function ToggleAppearance() {
+function ToggleTheme() {
   let color1;
   let color2;
-  if (Appearance == "light") {
-    Appearance = "dark";
+  if (Theme == "light") {
+    Theme = "dark";
     color1 = "white";
     color2 = "black";
   } else {
-    Appearance = "light";
+    Theme = "light";
     color1 = "black";
     color2 = "white";
   }
