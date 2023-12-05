@@ -1,6 +1,7 @@
 let DisplayTicking;
 let DisplayInterval = 50;
 let Theme = "light";
+let ThemeDebounce; 
 
 function DisplayTick() {
   if (points != 0) {
@@ -9,9 +10,8 @@ function DisplayTick() {
 }
 
 function ToggleTheme() {
-  let timer;
-  clearTimeout(timer);
-  timer = setTimeout(() => {
+  clearTimeout(ThemeDebounce);
+  ThemeDebounce = setTimeout(() => {
     let color1; //Contrast
     let color2; //Similar
     if (Theme == "light") {
