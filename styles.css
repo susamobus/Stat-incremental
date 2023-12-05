@@ -23,7 +23,8 @@ body {
   width: 250px; 
   height: 200px;
   font-size: 25px;
-  background-color: white;
-  border: 1px solid black;
+  color: white;
+  background-color: black;
+  border: 1px solid white;
   border-radius: 2px;
 }
