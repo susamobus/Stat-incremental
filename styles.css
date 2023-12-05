@@ -32,7 +32,13 @@ body {
   border-radius: 2px;
 }
 
-.Divs {
+.Containers {
+  color: black;
+  background-color: white;
+  border-color: black;
+}
+
+.Buttons {
   color: white;
   background-color: black;
   border-color: white;
