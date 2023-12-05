@@ -32,6 +32,16 @@ body {
   border-radius: 2px;
 }
 
+.SettingsButton {
+  width: 100px; 
+  height: 80px;
+  font-size: 10px;
+  color: white;
+  background-color: black;
+  border: 1px solid white;
+  border-radius: 2px;
+}
+
 .Containers {
   color: black;
   background-color: white;
