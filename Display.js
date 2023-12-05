@@ -2,7 +2,9 @@ let DisplayTicking;
 let DisplayInterval = 50;
 
 function DisplayTick() {
-  document.getElementById("pointdisplay").innerHTML = "Points: " + points
+  if (points != 0) {
+    document.getElementById("pointdisplay").innerHTML = "Points: " + points
+  }
 }
 
 function ToggleDisplayTick() {
