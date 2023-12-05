@@ -47,7 +47,7 @@ function ToggleTheme() {
     for (let i = 0; i < lengtharray[3]; i++) {
       containertext[i].style.color = color2;
     }
-  }, 1000);
+  }, 300);
 }
 
 function ToggleDisplayTick() {
