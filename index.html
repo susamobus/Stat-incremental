@@ -10,12 +10,12 @@
   <body onload="Load()">
     <div class="MainDisplay Containers" id="maindisplay">
       <span class="PointDisplay ContainerText" id="pointdisplay">Points: Loading</span>
-      <button onclick="OpenTab()" class="SettingsOpenButton Buttons" id="settingsbutton"></button>
+      <button onclick="OpenTab('SettingsTab')" class="SettingsOpenButton Buttons" id="settingsbutton"></button>
     </div>
-    <div id="SettingsTab">
+    <div class="Tab" id="SettingsTab">
       <button onclick="ToggleTheme()" class="SettingsButton Buttons" id="themebutton">Toggle Theme</button>
     </div>
-    <div id="PointsTab">
+    <div class="Tab" id="PointsTab">
       <button onclick="GainPoints()" class="PointButton Buttons" id="pointbutton">Gain 1 point</button>
     </div>
   </body>
