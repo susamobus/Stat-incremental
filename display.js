@@ -60,15 +60,15 @@ function ToggleTheme() {
     document.body.style.backgroundColor = color2;
     for (let i = 0; i < lengtharray[0]; i++) {
       let container = containers[i]
-      container.style.color = color2;
-      container.style.backgroundColor = color1;
-      container.style.borderColor = color2;
+      container.style.color = color1;
+      container.style.backgroundColor = color2;
+      container.style.borderColor = color1;
     }
     for (let i = 0; i < lengtharray[1]; i++) {
       let button = buttons[i]
-      button.style.color = color1;
-      button.style.backgroundColor = color2;
-      button.style.borderColor = color1;
+      button.style.color = color2;
+      button.style.backgroundColor = color1;
+      button.style.borderColor = color2;
     }
     for (let i = 0; i < lengtharray[2]; i++) {
       text[i].style.color = color1;
