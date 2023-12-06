@@ -1,8 +1,10 @@
 let DisplayTicking;
-let DisplayInterval = 50; //ms
-let FadeInDuration = 0.5; //s
+let DisplayInterval = 50;
+let FadeInDuration = 500;
 let Theme = "light";
-let ThemeDebounce; 
+let LastThemeChange = 0;
+let ThrottleDuration = 300;
+//Time in ms
 
 function DisplayTick() {
   if (points != 0) {
@@ -14,12 +16,14 @@ function FadeInTabs(id,duration = FadeInDuration) {
   let tab = document.getElementById(id)
   tab.style.display = "block"
   tab.style.transitionDuration = duration + "s"
-  tab.style.opacity = "1";
+  setTimeout(function() {
+    tab.style.opacity = "1";
+  }, duration)
 }
 
 function ToggleTheme() {
-  clearTimeout(ThemeDebounce);
-  ThemeDebounce = setTimeout(() => {
+  const now = Date.now();
+  if (now - LastThemeChange >= ThrottleDuration) {
     let color1; //Contrast
     let color2; //Similar
     if (Theme == "light") {
@@ -55,7 +59,8 @@ function ToggleTheme() {
     for (let i = 0; i < lengtharray[3]; i++) {
       containertext[i].style.color = color2;
     }
-  }, 300);
+  LastThemeChange = now;
+  }
 }
 
 function ToggleDisplayTick() {
