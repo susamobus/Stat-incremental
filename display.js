@@ -1,5 +1,6 @@
 let DisplayTicking;
-let DisplayInterval = 50;
+let DisplayInterval = 50; //ms
+let FadeInDuration = 0.5; //s
 let Theme = "light";
 let ThemeDebounce; 
 
