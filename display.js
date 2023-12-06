@@ -10,6 +10,13 @@ function DisplayTick() {
   }
 }
 
+function FadeInTabs(id,duration = FadeInDuration) {
+  let tab = document.getElementById(id)
+  tab.style.display = "block"
+  tab.style.transitionDuration = duration + "s"
+  tab.style.opacity = "1";
+}
+
 function ToggleTheme() {
   clearTimeout(ThemeDebounce);
   ThemeDebounce = setTimeout(() => {
