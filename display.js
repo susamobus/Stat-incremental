@@ -12,6 +12,23 @@ function DisplayTick() {
   }
 }
 
+function OpenTab(id,fade = false,duration = FadeInDuration) {
+  let tabs = document.getElementsByClassName("Tab") 
+  let i2 = tabs.length
+  for (let i = 0; i < i2; i++) {
+    let tab = tabs[i]
+    if (tab.id = id) {
+      if (fade) {
+        FadeInTabs(id,duration)
+      } else {
+        tab.style.display = "block"
+      }
+    } else {
+      tab.style.display = "none"
+    }
+  }
+}
+
 function FadeInTabs(id,duration = FadeInDuration) {
   let tab = document.getElementById(id)
   tab.style.display = "block"
