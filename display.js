@@ -17,7 +17,7 @@ function OpenTab(id,fade = false,duration = FadeInDuration) {
   let i2 = tabs.length
   for (let i = 0; i < i2; i++) {
     let tab = tabs[i]
-    if (tab.id = id) {
+    if (tab.id === id) {
       if (fade) {
         FadeInTabs(id,duration)
       } else {
