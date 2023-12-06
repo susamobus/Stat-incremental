@@ -15,7 +15,7 @@ function DisplayTick() {
 function FadeInTabs(id,duration = FadeInDuration) {
   let tab = document.getElementById(id)
   tab.style.display = "block"
-  tab.style.transitionDuration = duration + "s"
+  tab.style.transitionDuration = duration + "ms"
   setTimeout(function() {
     tab.style.opacity = "1";
   }, duration)
