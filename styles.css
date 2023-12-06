@@ -5,6 +5,10 @@ body {
   touch-action: manipulation;
 }
 
+.Tab {
+  display: none;
+}
+
 .MainDisplay {
   display: none;
   position: sticky;
@@ -46,7 +50,6 @@ body {
 }
 
 .SettingsButton {
-  display: none;
   width: 100px; 
   height: 80px;
   font-size: 10px;
