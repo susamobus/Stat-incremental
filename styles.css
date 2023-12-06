@@ -17,7 +17,7 @@ body {
   justify-content: center;
   align-items: center;
   opacity: 0;
-  transition: opacity ease;
+  transition: opacity linear;
 }
 
 .PointDisplay {
@@ -34,7 +34,19 @@ body {
   border-radius: 2px;
 }
 
+.SettingsOpenButton {
+  position: absolute;
+  right: 0;
+  width: 20px; 
+  height: 20px;
+  color: white;
+  background-color: black;
+  border: 1px solid white;
+  border-radius: 2px;
+}
+
 .SettingsButton {
+  display: none;
   width: 100px; 
   height: 80px;
   font-size: 10px;
