@@ -46,6 +46,8 @@ body {
   background-color: black;
   border: 1px solid white;
   border-radius: 2px;
+  opacity: 0;
+  transition: opacity linear;
 }
 
 .SettingsOpenButton {
