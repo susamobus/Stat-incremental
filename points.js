@@ -15,6 +15,7 @@ function PointUpgrade(index) {
     if (points>=5) {
       points -= 5;
       TickInterval = 200;
+      ToggleGameTick()
     }
   }
 }
