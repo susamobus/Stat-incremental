@@ -1,4 +1,5 @@
-let points = 0
+let points = 0;
+let pointupgrades = [false];
 
 function GainPoints() {
   if (points == 0) {
@@ -12,10 +13,11 @@ function GainPoints() {
 
 function PointUpgrade(index) {
   if (index==0) {
-    if (points>=5) {
+    if (points>=5&&!pointupgrades[0]) {
       points -= 5;
+      pointupgrades[0] = true;
       TickInterval = 200;
-      ToggleGameTick()
+      ToggleGameTick();
     }
   }
 }
