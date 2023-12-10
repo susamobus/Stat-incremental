@@ -11,7 +11,7 @@ function GainPoints() {
 }
 
 function PointUpgrade(index) {
-  if (index==1) {
+  if (index==0) {
     if (points>=5) {
       points -= 5;
       TickInterval = 200;
