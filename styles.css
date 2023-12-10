@@ -38,6 +38,16 @@ body {
   border-radius: 2px;
 }
 
+.MainUpgradeButton {
+  width: 150px; 
+  height: 100px;
+  font-size: 15px;
+  color: white;
+  background-color: black;
+  border: 1px solid white;
+  border-radius: 2px;
+}
+
 .SettingsOpenButton {
   position: absolute;
   right: 0;
