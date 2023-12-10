@@ -1,3 +1,5 @@
+let GameTicking;
+let TickInterval;
 let DisplayTicking;
 let DisplayInterval = 50;
 let FadeInDuration = 500;
@@ -5,6 +7,10 @@ let Theme = "light";
 let LastThemeChange = 0;
 let ThrottleDuration = 300;
 //Time in ms
+
+function GameTick() {
+  points += 1
+}
 
 function DisplayTick() {
   if (points != 0) {
@@ -89,6 +95,18 @@ function ToggleDisplayTick() {
   }
 }
 
+function ToggleGameTick() {
+  if (TickInterval) {
+    if (GameTicking) {
+      clearInterval(GameTicking);
+      GameTicking = undefined;
+    } else {
+      GameTicking = setInterval(GameTick, TickInterval);
+    }
+  }
+}
+
 function Load() {
+  ToggleGameTick()
   ToggleDisplayTick()
 }
