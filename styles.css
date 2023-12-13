@@ -71,6 +71,17 @@ body {
   border-radius: 2px;
 }
 
+.BackButton {
+  position: absolute;
+  left: 0;
+  width: 20px; 
+  height: 20px;
+  color: white;
+  background-color: black;
+  border: 1px solid white;
+  border-radius: 2px;
+}
+
 .Containers {
   color: black;
   background-color: white;
