@@ -20,7 +20,7 @@ function DisplayTick() {
 }
 
 function BackButton() {
-  if (TabsVisited.length) {
+  if (TabsVisited.length > 0) {
     OpenTab(TabsVisited[TabsVisited.length-1])
     TabsVisited.pop()
   }
