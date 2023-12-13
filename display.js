@@ -6,6 +6,7 @@ let FadeInDuration = 500;
 let Theme = "light";
 let LastThemeChange = 0;
 let ThrottleDuration = 300;
+let TabsVisited = [];
 //Time in ms
 
 function GameTick() {
@@ -15,6 +16,13 @@ function GameTick() {
 function DisplayTick() {
   if (points != 0) {
     document.getElementById("pointdisplay").innerHTML = "Points: " + points
+  }
+}
+
+function BackButton() {
+  if (TabsVisited.length) {
+    OpenTab(TabsVisited[TabsVisited.length-1])
+    TabsVisited.pop()
   }
 }
 
@@ -33,6 +41,7 @@ function OpenTab(id,fade = false,duration = FadeInDuration) {
       tab.style.display = "none"
     }
   }
+  TabsVisited.append(id)
 }
 
 function FadeInTabs(id,duration = FadeInDuration) {
