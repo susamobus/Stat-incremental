@@ -20,7 +20,7 @@ function DisplayTick() {
 }
 
 function BackButton() {
-  if (TabsVisited.length > 0) {
+  if (TabsVisited.length) {
     OpenTab(TabsVisited[TabsVisited.length-1])
     TabsVisited.pop()
   }
@@ -41,7 +41,7 @@ function OpenTab(id,fade = false,duration = FadeInDuration) {
       tab.style.display = "none"
     }
   }
-  TabsVisited.append(id)
+  TabsVisited.push(id)
 }
 
 function FadeInTabs(id,duration = FadeInDuration) {
