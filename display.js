@@ -20,8 +20,12 @@ function DisplayTick() {
 }
 
 function BackButton() {
-  OpenTab(TabsVisited[TabsVisited.length-2],undefined,undefined,false);
-  if (TabsVisited.length > 1) TabsVisited.pop();
+  if (TabsVisited.length > 1) {
+    OpenTab(TabsVisited[TabsVisited.length-2],undefined,undefined,false);
+    TabsVisited.pop();
+  } else {
+    OpenTab("PointsTab",undefined,undefined,false);
+  }
 }
 
 function OpenTab(id,fade = false,duration = FadeInDuration,push = true) {
