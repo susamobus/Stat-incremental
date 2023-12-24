@@ -21,12 +21,14 @@ function DisplayTick() {
 
 function BackButton() {
   if (TabsVisited.length > 0) {
-    OpenTab(TabsVisited[TabsVisited.length-1])
+    OpenTab(TabsVisited[TabsVisited.length-1],undefined,undefined,false)
     TabsVisited.pop()
+  } else {
+    OpenTab("PointsTab",undefined,undefined,false)
   }
 }
 
-function OpenTab(id,fade = false,duration = FadeInDuration) {
+function OpenTab(id,fade = false,duration = FadeInDuration,push = true) {
   let tabs = document.getElementsByClassName("Tab") 
   let i2 = tabs.length
   for (let i = 0; i < i2; i++) {
@@ -41,7 +43,7 @@ function OpenTab(id,fade = false,duration = FadeInDuration) {
       tab.style.display = "none"
     }
   }
-  TabsVisited.push(id)
+  if (push) TabsVisited.push(id);
 }
 
 function FadeInTabs(id,duration = FadeInDuration) {
